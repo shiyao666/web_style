@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin set_card($width, $btn_height, $padding_left_right, $bor_left_width, $card_head_middle_bgcl, $body_form, $border_left_color, $cfb_g_cl, $border_radius, $span_font_size, $span_color1, $span_color2) {
+    & {
+        display: block;
+        width: $width;
+        border-radius: $border_radius;
+        border: 2px solid #ccc;
+        border-left-width: $bor_left_width;
+        border-left-color: $border_left_color;
+        padding: 0 $padding_left_right;
+    }
+    &::after {
+        content: ' ';
+        clear: both;
+        display: block;
+        visibility: hidden;
+        height: 0;
+    }
+    .card-head {
+        display: block;
+        height: 50px;
+        line-height: 1.5;
+        border-bottom: 1px solid #ccc;
+        .card-head-left {
+            float: left;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: (nth($body_form, 1) / (nth($body_form, 1) + nth($body_form, 2) + nth($body_form, 3))) * 100%;
+        }
+        .card-head-middle {
+            float: left;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: (nth($body_form, 2) / (nth($body_form, 1) + nth($body_form, 2) + nth($body_form, 3))) * 100%;
+            background-color: $card_head_middle_bgcl;
+            height: 50px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .card-head-right {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            float: left;
+            width: (nth($body_form, 3) / (nth($body_form, 1) + nth($body_form, 2) + nth($body_form, 3))) * 100%;
+        }
+    }
+    .card-body {
+        display: block;
+        width: 100%;
+        height: 100px;
+    }
+    .card-body-left {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        float: left;
+        line-height: 1.5;
+        width: (nth($body_form, 1) / (nth($body_form, 1) + nth($body_form, 2) + nth($body_form, 3))) * 100%;
+        .card_day {
+            font-size: $span_font_size * 2;
+            color: $span_color1;
+            padding-right: 5px;
+        }
+        .card_month {
+            padding-left: 5px;
+            border-left: 1px solid #333;
+            font-size: $span_font_size;
+            color: $span_color1;
+        }
+        .card_year {
+            font-size: $span_font_size;
+            color: $span_color2;
+        }
+    }
+    .card-body-middle {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        float: left;
+        width: (nth($body_form, 2) / (nth($body_form, 1) + nth($body_form, 2) + nth($body_form, 3))) * 100%;
+    }
+    .card-body-right {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        float: left;
+        width: (nth($body_form, 3) / (nth($body_form, 1) + nth($body_form, 2) + nth($body_form, 3))) * 100%;
+    }
+    .card-foot {
+        line-height: 1.5;
+        margin-bottom: -#{$btn_height};
+        .card-foot-bottom {
+            width: 100px;
+            height: $btn_height;
+            vertical-align: middle;
+            text-align: center;
+            border: 1px solid #ccc;
+            color: #5e7295;
+            background-color: #d4e4ea;
+        }
+    }
+}
+

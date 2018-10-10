@@ -1,0 +1,52 @@
+// 最外大盒子 @minxin查询
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin set_dt_style($width, $height, $set_color) {
+    padding: 0;
+    margin: 0;
+    padding-top: 3*$height;
+    padding-bottom: 3*$height;
+    margin-left: $width;
+    dt {
+        width: $width;
+        text-align: right;
+        float: left;
+        margin-right: 1.5*$height;
+        margin-left: -#{$width};
+    }
+    dd::after {
+        clear: both;
+    }
+    dd {
+        margin: 0; // margin-left: -99999px;
+        line-height: 1.5*$height;
+        overflow: hidden;
+        text-indent: -99999px;
+        margin-bottom: 1.5*$height;
+    } // 引入颜色渲染
+    @media screen and (max-width:768px) {
+        dd {
+            width: 200px;
+        }
+    }
+    @include set_color($set_color);
+}
+
+@mixin set_color($data) {
+    @each $color in $data {
+        $n: index($data, $color);
+        dt:nth-of-type(#{$n}) {
+            color: $color;
+        } // #{$key}:nth($list: ,  )
+        dd:nth-of-type(#{$n}) {
+            background-color: $color;
+        }
+    }
+}
+
+.Bar_shape {
+    @include set_dt_style(200px, 14px, (#ccc, #f0f, #ff5));
+}

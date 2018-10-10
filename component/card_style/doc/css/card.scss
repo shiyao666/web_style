@@ -1,0 +1,5 @@
+@import '../main';
+.card-list {
+             
+    @include set_card(600px, 30px, 30px, 20px, #4c3688, (3, 2, 5), #2ab648, #3addd5, 12px, 16px, #000, #ccc);
+}

@@ -1,0 +1,27 @@
+@mixin evaluation_score_creater($color, $bg_color, $width, $icon_count, $op, $bg_img) {
+    position: relative;
+    width: 5em;
+    &::before {
+        content: ' ';
+        width: 5em;
+        background: url("#{$bg_img}");
+        display: block;
+        height: 1.5em;
+        position: absolute;
+        background-size: 1em;
+        background-repeat: repeat-x;
+        opacity: $op;
+        font-size: 1em;
+    }
+    .score {
+        position: absolute;
+        background-image: url("#{$bg_img}");
+        display: block;
+        height: 1.5em;
+        background-size: 1em;
+        background-repeat: repeat-x;
+        opacity: 0.5;
+        left: 0;
+        z-index: 1;
+    }
+}

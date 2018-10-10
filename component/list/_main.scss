@@ -1,0 +1,123 @@
+@mixin set_nav($navclassname) {
+    // examle
+    // ul.[$navclassname]
+    //     li
+    //         a
+    .#{$navclassname}>li>a {
+        @content;
+    }
+}
+
+;
+@mixin meun_creater() {
+    li {
+        overflow: hidden;
+        opacity: 0.3;
+    }
+    li.active,
+    li:hover {
+        opacity: 1;
+    }
+    a {
+        display: block;
+        text-decoration: none;
+        @content;
+    }
+}
+
+;
+.content {
+    transition: all ease-in-out 3s;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+}
+
+@mixin set_menu_hide() {
+    &.hide {
+        background: #fff;
+        .content {
+            z-index: 200;
+            margin-right: -100%;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+;
+@mixin set_menu_active() {
+    .content {
+        margin-left: 0;
+        z-index: 200;
+        top: 0;
+        right: 0;
+        @content;
+    }
+}
+
+;
+@mixin creat_menu() {
+    ///menu 
+    @media screen and (max-width: 768px) {
+        &.active:before {
+            position: fixed;
+            content: ' ';
+            background: rgba(0, 0, 0, 0.6);
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+        @include set_menu_hide() {}
+        ;
+        @include set_menu_active() {}
+    }
+    ;
+}
+
+.menu {
+    // 显示隐藏
+    @include creat_menu(); //
+    // ul透明度
+    @include meun_creater() {
+        border-left: 5px #000 solid;
+        padding: 0.5em 1em;
+        margin-left: 1em;
+        background: #eee;
+    }
+    @include set_nav(nav2) {
+        border-left: 5px #f0f solid;
+        padding: 0.5em 1em;
+        margin-left: 4em;
+        background: #fff;
+    }
+    @include set_nav(wfw) {
+        border-left: 5px #00f solid;
+        padding: 0.5em 1em;
+        margin-left: 4em;
+        background: #fff;
+    }
+    @include set_nav(nav1) {
+        border-left: 5px #f00 solid;
+        padding: 0.5em 1em;
+        background: #fff;
+    }
+}
+
+.on_off_btn {
+    position: fixed;
+    width: 80px;
+    height: 50px;
+    left: 20px;
+    top: 80%;
+    overflow: hidden;
+    background: #eee;
+    color: #222;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+;

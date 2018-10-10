@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文章阅读页</title>
+    <link rel="stylesheet" href="art5.css">
+    <script src="jquery.min.js"></script>
+    <script src="art5.js"></script>
+</head>
+
+<body>
+    <div id="set_phone">
+        <p>设置宽度：<button id="width_set_open">点击设置</button></p>
+
+    </div>
+
+    <div id="set">
+        <ul>
+            <li>
+                <span>请选择宽(px):</span>
+                <button id="btn_all">100%</button>
+                <button id="btn_400">400px</button>
+                <button id="btn_800">800px</button>
+                <span class="custom_span">自定义</span>
+                <input type="text" id="custom" placeholder="单位px">
+
+            </li>
+
+            <button id="btn_rst">重置</button><button id="btn_true">确认</button>
+        </ul>
+    </div>
+    <div class="art3" id="width_common">
+        <h1 class="title">简书平台关于打击抄袭行为的公告2018/07/31</h1>
+        <!-- 作者区域 -->
+        <div class="author">
+            <img src="src/06.png" alt="96" />
+            <div class="info">
+                <!-- 关注用户按钮 -->
+                <div props-data-classes="user-follow-button-header" data-author-follow-button></div>
+                <!-- 文章数据信息 -->
+                <div class="meta">
+                    <!-- 如果文章更新时间大于发布时间，那么使用 tooltip 显示更新时间 -->
+                    <span class="publish-time" data-toggle="tooltip" data-placement="bottom" title="最后编辑于 2018.07.31 18:37">2018.07.31
+                        18:02*
+                    </span>
+                    <span class="wordage">字数 278</span>
+                    <p>我和男朋友谈了2年半了，一直都挺好，男朋友沉默寡言，平时很少发表自己的意见，也不是主动的人，对我一直挺好，很关心。他还有一个弟弟，也有个女朋友，他们打算结婚，弟弟想在我们之后在结婚，重要的是我现在不想结婚还太早了，98年。
+                        男朋友的妈妈，就一直给我讲道理，变相的催我结婚，而我妈妈不让早结婚。男朋友的妈妈觉得我妈妈的思想老旧，现在孩子应该早结婚。其中有一点我妈妈不愿意我和他在一起，他们家是在村里盖的房子，我妈觉得会去吃苦，工作也不方便，而且他们家有4个孩子，怕相处不好。
+                        我一直在犹豫要不要分手，不要太耽误他的时间，但是他人真的很好。如果以后在一起会很累，超级累，他的家庭状况一般。最主要的是他妈妈的一些思想，行为是我所不能接受的，以后的相处肯定很难，不会很融洽，我该怎么办比较好？
+                        虽然现在讲门当户对很过分，但是当遇到一件事情，我很难接受他们的处理方式。和在我们家完全不一样，在我家里，很注重素质，不会脏话成章，待人处事也不一样，他们家时不时的脏话满天飞，很强势，强势到男朋友妈妈说话很硬气，我都不敢反驳😂😂
+                        我该怎么办？分手离开还是继续待着？ 作者：简书树洞 链接：https://www.jianshu.com/p/f712b87d8a5c 來源：简书 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+                    </p>
+                </div>
+            </div>
+            <!-- 如果是当前作者，加入编辑按钮 -->
+        </div>
+        <!-- 文章内容 -->
+        <div data-note-content class="show-content">
+            <div class="show-content-free">
+                <p>尊敬的简书用户：</p>
+                <p> 长期以来，简书平台致力于为广大创作者提供良好的创作环境，倡导对作者著作权及相关权益的保护，谴责根据《中华人民共和国著作权法》《信息网络传播保护条例》《关于规范网络转载版权秩序的通知》等有关法律法规的规定，侵犯原创作者和相关权利人合法权益的各类侵权行为。</p>
+
+                <p><b> 经简书官方核查确认，7月份共发现用户抄袭行为52起，平台对以下存在抄袭行为的简书号进行了文章锁定处罚。</b></p>
+
+                <img src="src/17.png" alt="">
+
+                <p><b> 对以下屡次抄袭，违规情况恶劣的简书用户予以账号封禁处理：</b></p>
+                <p> 简书愿意扶持优秀的原创作者与平台共同成长，并继续加大对侵害著作权人权益的各类不当行为的惩处力度。感谢各位用户对简书平台的支持和关爱。</p>
+                <p>我和男朋友谈了2年半了，一直都挺好，男朋友沉默寡言，平时很少发表自己的意见，也不是主动的人，对我一直挺好，很关心。他还有一个弟弟，也有个女朋友，他们打算结婚，弟弟想在我们之后在结婚，重要的是我现在不想结婚还太早了，98年。
+                    男朋友的妈妈，就一直给我讲道理，变相的催我结婚，而我妈妈不让早结婚。男朋友的妈妈觉得我妈妈的思想老旧，现在孩子应该早结婚。其中有一点我妈妈不愿意我和他在一起，他们家是在村里盖的房子，我妈觉得会去吃苦，工作也不方便，而且他们家有4个孩子，怕相处不好。
+                    我一直在犹豫要不要分手，不要太耽误他的时间，但是他人真的很好。如果以后在一起会很累，超级累，他的家庭状况一般。最主要的是他妈妈的一些思想，行为是我所不能接受的，以后的相处肯定很难，不会很融洽，我该怎么办比较好？
+                    虽然现在讲门当户对很过分，但是当遇到一件事情，我很难接受他们的处理方式。和在我们家完全不一样，在我家里，很注重素质，不会脏话成章，待人处事也不一样，他们家时不时的脏话满天飞，很强势，强势到男朋友妈妈说话很硬气，我都不敢反驳😂😂
+                    我该怎么办？分手离开还是继续待着？ 作者：简书树洞 链接：https://www.jianshu.com/p/f712b87d8a5c 來源：简书 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+                </p>
+            </div>
+        </div>
+        <h2>
+            十个Python爬虫武器库示例，十个爬虫框架，十种实现爬虫的方法！
+        </h2>
+        <a href="http://www.baidu.com">点击访问百度首页</a>
+        <ul>
+            <li>python 脚本控制，可以用任何你喜欢的html解析包（内置 pyquery）</li>
+            <li> WEB 界面编写调试脚本，起停脚本，监控执行状态，查看活动历史，获取结果产出 </li>
+            <li> 数据存储支持MySQL, MongoDB, Redis, SQLite, Elasticsearch; PostgreSQL 及 SQLAlchemy </li>
+            <li> 作者：Python新世界 </li>
+            <li> 链接：https://www.jianshu.com/p/323d87ba6040 </li>
+            <li> 來源：简书 </li>
+            <li> 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。 </li>
+        </ul>
+        <div class="table_set_div">
+            <button id="table_large">大表格100%</button><button id="table_mid">中表格800px</button><button id="table_small">小表格400px</button>
+            <span>自定义表格</span><input type="text" placeholder="单位px" id="table_custom">
+        </div>
+        <table class="table_big table_mids table_little" id="table_set">
+            <thead>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                </tr>
+
+            </thead>
+            <tr>
+                <th>内容1</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>内容1</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>内容1</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>内容1</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>内容1</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </table>
+        <dl>
+            <dt>从此写作变微商</dt>
+            <dd>2016 -14 </dd>
+            <dd>2015 -7.5 </dd>
+            <dd>2014 -12.5 </dd>
+        </dl>
+        <div class="clearfix"></div>
+        <dl>
+            <dt>日期变更</dt>
+            <dd>2013 -9 </dd>
+            <dd>2012 -10 </dd>
+            <dd>2011 -17.5</dd>
+        </dl>
+        <div class="clearfix"></div>
+        <dl>
+            <dt>内容介绍</dt>
+            <dd>英语一 1998-2018 预计一日一套 8.1-8.31 </dd>
+            <dd>4.中公词汇狂练 8.31前完成（共167页） </dd>
+            <dd>已完成 1-33 </dd>
+        </dl>
+        <div class="clearfix"></div>
+        <dl>
+            <dt>相关介绍</dt>
+            <dd>链接：https://www.jianshu.com/p/1f361e85</dd>
+            <dd>來源：简书 </dd>
+            <dd>简书著作权归作者所有，任何形式的转载都请</dd>
+        </dl>
+        <div class="clearfix"></div>
+        <p>cookie是服务器传递到浏览器，保存在浏览器中的数据，然后浏览器每次请求都带上cookie，这样就可以标识用哪一个用户发起的请求， 比如说把用户登录的用户名和密码保存在cookie中， 只要cookie没有过期，以后用户每次登录都可以自动登录了，不需要在此输入用户名和密码，
+            因为浏览器在发起请求的时候已经把cookie中的用户名和密码传递给服务器了。 session是什么呢？session把用户的信息保存在服务器上面， 浏览器第一次访问的时候服务器把sessionID传递到浏览器，然后浏览器把Session_id保存在cookie中，
+            每次访问把session_id带上，服务器就可以标识这个请求来自于那个用户，然后根据session_id查这个这个用户的seesion里面记录了哪些数据 作者：唐怀瑟_ 链接：https://www.jianshu.com/p/a776376561e8
+            來源：简书 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+        </p>
+    </div>
+
+
+</body>
+
+</html>

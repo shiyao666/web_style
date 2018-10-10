@@ -1,0 +1,38 @@
+@import "../../main";
+.legend_name {
+    height: 500px;
+    border: 1px solid #ccc;
+    list-style: none;
+    @include legend_creater(left, 14px);
+}
+
+.legend_style_li {
+    @include item_setter(none, none, 1);
+    right: 2*$font-size;
+    list-style: none;
+}
+
+.legend_name {
+    width: 50*$font-size;
+}
+
+.legend_style_li1 {
+    color: #ae00ff;
+    &::before{
+        background-color: #ae00ff;
+    }
+}
+
+.legend_style_li2 {
+    color: #00d5e4;
+    &::before{
+        background-color: #00d5e4;
+    }
+}
+
+.legend_style_li3 {
+    color: #04c534;
+    &::before{
+        background-color: #04c534;
+    }
+}

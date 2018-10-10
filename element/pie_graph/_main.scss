@@ -1,0 +1,78 @@
+@mixin creat-pie($stroke_color,$percents_value,$bg_color:#fff) {
+    //html demo
+    // <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.8309886 33.8309886">
+    //     <circle xmlns="http://www.w3.org/2000/svg"></circle>
+    // </svg>
+    // $percents_value :[0-$percents_value_max]
+    $view_size:200;
+    $percents_value_max:100;
+    $line-width:32;
+    $r:($view_size - $line-width)/2;
+    $cx:$view_size/2;
+    $fill: transparent;
+    $rasterize_width:16 !default;
+    $rasterize_count:5 !default;
+    $stroke_bg_color:#eee !default;
+    $cicle_length:$r*2*3.1415926;
+    position: relative;
+    overflow: hidden;
+    svg {
+        transform: rotate(-90deg);
+    }
+    circle {
+        r: $r;
+        cx: $cx;
+        cy: $cx;
+        fill: $fill;
+        stroke: $stroke_color;
+        stroke-width: $line-width;
+        stroke-dasharray: #{$percents_value/100*$cicle_length} #{$cicle_length};
+        transition: stroke-dasharray ease-in-out 0.3s;
+    }
+    
+    @include set-rasterize($view_size,$bg_color,"#{$rasterize_width} #{$cicle_length/$rasterize_count - $rasterize_width}",$rasterize_width,$r,$cx,$cx,$fill,$line-width + 1);
+    @include set-bg-pie($view_size,$stroke_bg_color,initial,$r,$cx,$cx,$fill,$line-width);
+}
+
+@mixin set-rasterize($view_size,$color,$dasharray,$rasterize_width,$r,$cx,$cy,$fill,$stroke-width) {
+    &:after {
+        content: " ";
+        z-index: 1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        transform: rotate(-#{$rasterize_width*180/($r*2*3.1415926) + 90}deg);
+        background-image: url(set_pie_rasterize($view_size,$color,$dasharray,$r,$cx,$cy,$fill,$stroke-width));
+    }
+}
+@mixin set-bg-pie($view_size,$color,$dasharray,$r,$cx,$cy,$fill,$stroke-width) {
+    &:before {
+        content: " ";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        background-image: url(set_pie_rasterize($view_size,$color,$dasharray,$r,$cx,$cy,$fill,$stroke-width));
+    }
+}
+
+@function set_pie_rasterize($view_size,$color,$dasharray,$r,$cx,$cy,$fill,$stroke-width) {
+    //@param $color 图标填充颜色颜色
+    @return create_pie_rasterize("0 0 #{$view_size} #{$view_size}",
+    "circle",
+    "r: #{$r};cx: #{$cx};cy: #{$cy};fill: #{$fill};stroke: #{$color};stroke-width: #{$stroke-width};",
+    $dasharray);
+}
+@function create_pie_rasterize($viewBox,
+$path_type,
+$style,
+$dasharray) {
+    //@param $dasharray 虚线类型
+    //@param $viewBox 视窗大小
+    //@param $path_type 图像类型
+    //@param $style 样式
+    @return "data:image/svg+xml;charset=utf-8, "+"%3csvg xmlns='http://www.w3.org/2000/svg' "+"viewBox='#{$viewBox}'"+"%3e%3c#{$path_type} "+"style='#{$style} stroke-dasharray: #{$dasharray};'"+"/%3e%3c/svg%3e";
+}

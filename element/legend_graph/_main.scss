@@ -1,0 +1,42 @@
+$font-size:14px;
+
+@mixin legend_creater($align, $font-size) {
+    & {
+        text-align: $align;
+        font-size: $font-size;
+        li:before{
+            right: 3*$font-size;
+        }
+    }
+    @if ($align==left) {
+        & li {
+            text-align: $align;
+            padding-left: $font-size;
+           &:before{
+                left: 0;
+            }
+        }
+    }
+}
+
+@mixin item_setter($symbol_name, $color, $is_oneline) {
+    position: relative;
+    & {
+        color: $color;
+    }
+    &:before {
+        content: " ";
+        color: $color;
+        display: block;
+        background: $color; // background-image:url($symbol_name); 
+        width: 0.8*$font-size;
+        height: 0.8*$font-size;
+        position: absolute;
+        top: 4px;
+    }
+    @if ($is_oneline==1) {
+        width: 5*$font-size;
+        display: inline-block;
+    }
+
+}

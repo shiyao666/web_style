@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'consola';
+    src: url(CONSOLA.TTF);
+}
+
+@mixin creat_financial_number($font_size, $font_color, $number_bg, $bg_color) {
+    color: $font_color;
+    padding-left: 1em;
+    font-size: $font_size;
+    overflow: hidden;
+    width: 9.5*$font_size; 
+    line-height: 2;
+    background-color: $bg_color;
+    &::before {
+        content: '￥';
+        margin-left: -1em;
+        position: absolute;
+        opacity: .5;
+    }
+    & span:first-child {
+        background-repeat: repeat-x;
+        background-size: $font_size + $font_size - 0.5498 * $font_size - 0.00071;
+        font-family: 'consola';
+        background-image: url($number_bg);
+        letter-spacing: $font_size - 0.5498 * $font_size - 0.00071;
+        text-indent: 0.5*$font_size;
+        opacity: 1;
+        position: relative;
+    }
+    & span:first-child::after {
+        position: absolute;
+        right: 0;
+        display: block;
+        background: #fff;
+        content: ' ';
+        top: 0;
+        width: 0.5*$font_size;
+        height: 2*$font_size;
+        ;
+    }
+    & span {
+        float: left;
+        opacity: .5;
+        line-height: 2;
+    }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.s_financial {
+    @include creat_financial_number(1em, rgb(194, 18, 18), '1.jpg', #eee)
+}

@@ -1,0 +1,70 @@
+.content {
+  transition: all ease-in-out 3s;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: fixed; }
+
+@media screen and (max-width: 768px) {
+  .menu.active:before {
+    position: fixed;
+    content: ' ';
+    background: rgba(0, 0, 0, 0.6);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; }
+  .menu.hide {
+    background: #fff; }
+    .menu.hide .content {
+      z-index: 200;
+      margin-right: -100%;
+      right: 0;
+      top: 0; }
+  .menu .content {
+    margin-left: 0;
+    z-index: 200;
+    top: 0;
+    right: 0; } }
+.menu li {
+  overflow: hidden;
+  opacity: 0.3; }
+.menu li.active,
+.menu li:hover {
+  opacity: 1; }
+.menu a {
+  display: block;
+  text-decoration: none;
+  border-left: 5px #000 solid;
+  padding: 0.5em 1em;
+  margin-left: 1em;
+  background: #eee; }
+.menu .nav2 > li > a {
+  border-left: 5px #f0f solid;
+  padding: 0.5em 1em;
+  margin-left: 4em;
+  background: #fff; }
+.menu .wfw > li > a {
+  border-left: 5px #00f solid;
+  padding: 0.5em 1em;
+  margin-left: 4em;
+  background: #fff; }
+.menu .nav1 > li > a {
+  border-left: 5px #f00 solid;
+  padding: 0.5em 1em;
+  background: #fff; }
+
+.on_off_btn {
+  position: fixed;
+  width: 80px;
+  height: 50px;
+  left: 20px;
+  top: 80%;
+  overflow: hidden;
+  background: #eee;
+  color: #222;
+  text-decoration: none;
+  z-index: 1000; }
+
+/*# sourceMappingURL=main.css.map */

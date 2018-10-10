@@ -1,0 +1,46 @@
+.pie {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  overflow: hidden; }
+  .pie svg {
+    transform: rotate(-90deg); }
+  .pie circle {
+    r: 84;
+    cx: 100;
+    cy: 100;
+    fill: transparent;
+    stroke: #333;
+    stroke-width: 32;
+    stroke-dasharray: 316.67253408 527.7875568;
+    transition: stroke-dasharray ease-in-out 0.3s; }
+  .pie:after {
+    content: " ";
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    transform: rotate(-95.4567409991deg);
+    background-image: url("data:image/svg+xml;charset=utf-8, %3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3e%3ccircle style='r: 84;cx: 100;cy: 100;fill: transparent;stroke: #fff;stroke-width: 33; stroke-dasharray: 16 89.55751136;'/%3e%3c/svg%3e"); }
+  .pie:before {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-image: url("data:image/svg+xml;charset=utf-8, %3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3e%3ccircle style='r: 84;cx: 100;cy: 100;fill: transparent;stroke: #eee;stroke-width: 32; stroke-dasharray: initial;'/%3e%3c/svg%3e"); }
+  .pie span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 2; }
+
+/*# sourceMappingURL=pie.css.map */

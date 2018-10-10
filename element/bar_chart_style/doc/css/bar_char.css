@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.Bar_shape {
+  padding: 0;
+  margin: 0;
+  padding-top: 42px;
+  padding-bottom: 42px;
+  margin-left: 200px; }
+  .Bar_shape dt {
+    width: 200px;
+    text-align: right;
+    float: left;
+    margin-right: 21px;
+    margin-left: -200px; }
+  .Bar_shape dd::after {
+    clear: both; }
+  .Bar_shape dd {
+    margin: 0;
+    line-height: 21px;
+    overflow: hidden;
+    text-indent: -99999px;
+    margin-bottom: 21px; }
+  @media screen and (max-width: 768px) {
+    .Bar_shape dd {
+      width: 200px; } }
+  .Bar_shape dt:nth-of-type(1) {
+    color: #ccc; }
+  .Bar_shape dd:nth-of-type(1) {
+    background-color: #ccc; }
+  .Bar_shape dt:nth-of-type(2) {
+    color: #f0f; }
+  .Bar_shape dd:nth-of-type(2) {
+    background-color: #f0f; }
+  .Bar_shape dt:nth-of-type(3) {
+    color: #ff5; }
+  .Bar_shape dd:nth-of-type(3) {
+    background-color: #ff5; }
+
+.Bar_shape {
+  padding: 0;
+  margin: 0;
+  padding-top: 42px;
+  padding-bottom: 42px;
+  margin-left: 200px; }
+  .Bar_shape dt {
+    width: 200px;
+    text-align: right;
+    float: left;
+    margin-right: 21px;
+    margin-left: -200px; }
+  .Bar_shape dd::after {
+    clear: both; }
+  .Bar_shape dd {
+    margin: 0;
+    line-height: 21px;
+    overflow: hidden;
+    text-indent: -99999px;
+    margin-bottom: 21px; }
+  @media screen and (max-width: 768px) {
+    .Bar_shape dd {
+      width: 200px; } }
+  .Bar_shape dt:nth-of-type(1) {
+    color: #ccc; }
+  .Bar_shape dd:nth-of-type(1) {
+    background-color: #ccc; }
+  .Bar_shape dt:nth-of-type(2) {
+    color: #f0f; }
+  .Bar_shape dd:nth-of-type(2) {
+    background-color: #f0f; }
+  .Bar_shape dt:nth-of-type(3) {
+    color: #ff5; }
+  .Bar_shape dd:nth-of-type(3) {
+    background-color: #ff5; }
+
+/*# sourceMappingURL=bar_char.css.map */
