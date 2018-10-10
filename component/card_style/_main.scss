@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 
-@mixin set_card($width, $btn_height, $padding_left_right, $bor_left_width, $card_head_middle_bgcl, $body_form, $border_left_color, $cfb_g_cl, $border_radius, $span_font_size, $span_color1, $span_color2) {
+@mixin set_card( $btn_height, $padding_left_right, $bor_left_width, $card_head_middle_bgcl, $body_form, $border_left_color, $cfb_g_cl, $border_radius) {
     & {
         display: block;
-        width: $width;
+        width: 100%;
         border-radius: $border_radius;
         border: 2px solid #ccc;
         border-left-width: $bor_left_width;
@@ -64,21 +64,6 @@
         float: left;
         line-height: 1.5;
         width: (nth($body_form, 1) / (nth($body_form, 1) + nth($body_form, 2) + nth($body_form, 3))) * 100%;
-        .card_day {
-            font-size: $span_font_size * 2;
-            color: $span_color1;
-            padding-right: 5px;
-        }
-        .card_month {
-            padding-left: 5px;
-            border-left: 1px solid #333;
-            font-size: $span_font_size;
-            color: $span_color1;
-        }
-        .card_year {
-            font-size: $span_font_size;
-            color: $span_color2;
-        }
     }
     .card-body-middle {
         overflow: hidden;
@@ -108,5 +93,5 @@
             background-color: #d4e4ea;
         }
     }
+    margin-bottom: $btn_height+10px;
 }
-

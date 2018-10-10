@@ -46,7 +46,3 @@ body {
         }
     }
 }
-
-.Bar_shape {
-    @include set_dt_style(200px, 14px, (#ccc, #f0f, #ff5));
-}
