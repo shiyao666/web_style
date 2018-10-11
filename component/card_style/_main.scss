@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-@mixin set_card( $btn_height, $padding_left_right, $bor_left_width, $card_head_middle_bgcl, $body_form, $border_left_color, $cfb_g_cl, $border_radius) {
+@mixin set_card( $btn_height, $padding_left_right, $bor_left_width, $body_form, $border_left_color, $cfb_g_cl, $border_radius) {
     & {
         display: block;
         width: 100%;
@@ -22,76 +22,34 @@
         height: 0;
     }
     .card-head {
+        float: left;
         display: block;
-        height: 50px;
         line-height: 1.5;
         border-bottom: 1px solid #ccc;
         .card-head-left {
-            float: left;
             overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            width: (nth($body_form, 1) / (nth($body_form, 1) + nth($body_form, 2) + nth($body_form, 3))) * 100%;
-        }
-        .card-head-middle {
-            float: left;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            width: (nth($body_form, 2) / (nth($body_form, 1) + nth($body_form, 2) + nth($body_form, 3))) * 100%;
-            background-color: $card_head_middle_bgcl;
-            height: 50px;
-            text-align: center;
-            vertical-align: middle;
+            width: (nth($body_form, 1) / (nth($body_form, 1) + nth($body_form, 2))) * 100%;
         }
         .card-head-right {
             overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            float: left;
-            width: (nth($body_form, 3) / (nth($body_form, 1) + nth($body_form, 2) + nth($body_form, 3))) * 100%;
+            width: (nth($body_form, 2) / (nth($body_form, 1) + nth($body_form, 2))) * 100%;
         }
     }
     .card-body {
-        display: block;
+        float: left;
         width: 100%;
-        height: 100px;
     }
     .card-body-left {
         overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        float: left;
-        line-height: 1.5;
-        width: (nth($body_form, 1) / (nth($body_form, 1) + nth($body_form, 2) + nth($body_form, 3))) * 100%;
-    }
-    .card-body-middle {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        word-break: break-all;
-        float: left;
-        width: (nth($body_form, 2) / (nth($body_form, 1) + nth($body_form, 2) + nth($body_form, 3))) * 100%;
+        width: (nth($body_form, 1) / (nth($body_form, 1) + nth($body_form, 2))) * 100%;
     }
     .card-body-right {
         overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        float: left;
-        width: (nth($body_form, 3) / (nth($body_form, 1) + nth($body_form, 2) + nth($body_form, 3))) * 100%;
+        width: (nth($body_form, 2) / (nth($body_form, 1) + nth($body_form, 2))) * 100%;
     }
     .card-foot {
-        line-height: 1.5;
+        float: left;
         margin-bottom: -#{$btn_height};
-        .card-foot-bottom {
-            width: 100px;
-            height: $btn_height;
-            vertical-align: middle;
-            text-align: center;
-            border: 1px solid #ccc;
-            color: #5e7295;
-            background-color: #d4e4ea;
-        }
     }
-    margin-bottom: $btn_height+10px;
+
 }

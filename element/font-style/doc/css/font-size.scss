@@ -1,0 +1,8 @@
+@import '../../main';
+.s1 {
+    @include set-font-style(1.5em, #000, 3);
+}
+
+.s2 {
+    @include set-font-style(1.5em, #d11919, 2)
+}

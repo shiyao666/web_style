@@ -1,4 +1,4 @@
 @import '../../main';
 .card-item {
-    @include set_card( 30px, 10px, 10px, #4c3688, (3, 2, 5), #2ab648, #3addd5, 12px);
+    @include set_card( 30px, 10px, 10px, (3, 2), #2ab648, #3addd5, 12px);
 }
