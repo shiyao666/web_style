@@ -1,0 +1,4 @@
+@import '../../main.scss';
+.date—style {
+    @include set-date(14px, #000, #ccc)
+}
