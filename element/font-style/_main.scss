@@ -1,17 +1,7 @@
-@mixin set-font-style($line-height, $color1, $style) {
-    @if($style==1) {
-        & {
-            line-height: $line-height;
-        }
-    }
-    @if($style==2) {
-        & {
-            display: block;
-            line-height: $line-height;
-            color: $color1;
-        }
-    }
-    @else if($style==3) {
-        & {}
-    }
+@mixin set-font-style($width, $line-height, $height, $color1) {
+    width: $width;
+    line-height: $line-height;
+    color: $color1;
+    overflow: hidden;
+    height: $height;
 }

@@ -4,41 +4,44 @@
   box-sizing: border-box; }
 
 .card-item {
-  display: block;
-  width: 100%;
-  border-radius: 12px;
-  border: 2px solid #ccc;
-  border-left-width: 10px;
-  border-left-color: #2ab648;
-  padding: 0 10px; }
-.card-item::after {
-  content: ' ';
-  clear: both;
-  display: block;
-  visibility: hidden;
-  height: 0; }
-.card-item .card-head {
-  float: left;
-  display: block;
-  line-height: 1.5;
-  border-bottom: 1px solid #ccc; }
-  .card-item .card-head .card-head-left {
+  width: 600px; }
+  .card-item {
+    display: block;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    border-left-width: 10px;
+    border-left-color: #2ab648;
+    padding: 0 10px; }
+  .card-item::after {
+    content: ' ';
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0; }
+  .card-item .card-head {
+    float: left;
+    display: block;
+    line-height: 1.5;
+    border-bottom: 1px solid #ccc; }
+    .card-item .card-head .card-head-left {
+      overflow: hidden;
+      width: 60%; }
+    .card-item .card-head .card-head-right {
+      overflow: hidden;
+      width: 40%; }
+  .card-item .card-body {
+    float: left;
+    width: 100%; }
+  .card-item .card-body-left {
+    float: left;
     overflow: hidden;
     width: 60%; }
-  .card-item .card-head .card-head-right {
+  .card-item .card-body-right {
+    float: left;
     overflow: hidden;
     width: 40%; }
-.card-item .card-body {
-  float: left;
-  width: 100%; }
-.card-item .card-body-left {
-  overflow: hidden;
-  width: 60%; }
-.card-item .card-body-right {
-  overflow: hidden;
-  width: 40%; }
-.card-item .card-foot {
-  float: left;
-  margin-bottom: -30px; }
+  .card-item .card-foot {
+    float: left;
+    margin-bottom: -30px; }
 
 /*# sourceMappingURL=card.css.map */

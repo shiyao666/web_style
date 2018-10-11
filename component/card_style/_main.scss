@@ -7,7 +7,7 @@
 @mixin set_card( $btn_height, $padding_left_right, $bor_left_width, $body_form, $border_left_color, $cfb_g_cl, $border_radius) {
     & {
         display: block;
-        width: 100%;
+
         border-radius: $border_radius;
         border: 2px solid #ccc;
         border-left-width: $bor_left_width;
@@ -40,10 +40,12 @@
         width: 100%;
     }
     .card-body-left {
+        float: left;
         overflow: hidden;
         width: (nth($body_form, 1) / (nth($body_form, 1) + nth($body_form, 2))) * 100%;
     }
     .card-body-right {
+        float: left;
         overflow: hidden;
         width: (nth($body_form, 2) / (nth($body_form, 1) + nth($body_form, 2))) * 100%;
     }

@@ -1,6 +1,15 @@
-.s2 {
-  display: block;
+.s1 {
+  width: 6em;
   line-height: 1.5em;
-  color: #d11919; }
+  color: #000;
+  overflow: hidden;
+  height: 1em; }
+
+.s2 {
+  width: 6em;
+  line-height: 1.5em;
+  color: #ca1414;
+  overflow: hidden;
+  height: 1em; }
 
 /*# sourceMappingURL=font-size.css.map */
