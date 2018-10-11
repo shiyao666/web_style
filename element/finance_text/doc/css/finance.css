@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'consola';
+  src: url(src/CONSOLA.TTF); }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.s_financial {
+  color: #c21212;
+  padding-left: 1em;
+  font-size: 1em;
+  overflow: hidden;
+  width: 9em;
+  line-height: 2;
+  background-color: #eee; }
+  .s_financial::before {
+    content: '￥';
+    margin-left: -1em;
+    position: absolute;
+    opacity: .5; }
+  .s_financial span:first-child {
+    background-repeat: repeat-x;
+    background-size: 1em;
+    font-family: 'consola';
+    background-image: url("src/1.png");
+    letter-spacing: 0.44949em;
+    opacity: 1;
+    position: relative;
+    padding-left: 0.25em;
+    width: 7em; }
+  .s_financial span {
+    float: left;
+    opacity: .5;
+    line-height: 2; }
+
+/*# sourceMappingURL=finance.css.map */

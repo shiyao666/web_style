@@ -1,0 +1,4 @@
+@import 'main';
+.s_financial {
+    @include creat_financial_number(1em, rgb(194, 18, 18), 'src/1.png', #eee)
+}
