@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'consola';
-  src: url("src/consola-simple.woff") format("woff"), url("src/consola-simple.otf") format("truetype"); }
+  src: url("src/consola-simple.woff") format("woff"), url("src/consola-simple.otf") format("opentype"); }
 * {
   margin: 0;
   padding: 0;
