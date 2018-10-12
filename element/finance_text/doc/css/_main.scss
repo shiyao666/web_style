@@ -1,14 +1,17 @@
 @font-face {
     font-family: 'consola';
-    src: url(src/CONSOLA.TTF);
+    src: url('src/consola-simple.woff') format('woff'), url('src/consola-simple.otf') format('truetype');
 }
 
-@mixin creat_financial_number($font_size, $font_color, $number_bg, $bg_color) {
+@mixin creat_financial_number($font_size,
+$font_color,
+$number_bg,
+$bg_color) {
     color: $font_color;
     padding-left: 1em;
     font-size: $font_size;
     overflow: hidden;
-    width: 9em; 
+    width: 9em;
     line-height: 2;
     background-color: $bg_color;
     &::before {
@@ -23,19 +26,16 @@
         font-family: 'consola';
         background-image: url($number_bg);
         letter-spacing: $font_size - 0.5498 * $font_size - 0.00071;
-
         opacity: 1;
         position: relative;
         padding-left: 0.25em;
         width: 7em;
     }
-
     & span {
         float: left;
         opacity: .5;
         line-height: 2;
     }
-
 }
 
 * {
@@ -43,4 +43,3 @@
     padding: 0;
     box-sizing: border-box;
 }
-
