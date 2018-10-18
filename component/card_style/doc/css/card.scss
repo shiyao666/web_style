@@ -1,5 +1,5 @@
 @import '../../main';
 .crius-card-list {
     @include set_card( 10px, (3, 2), #2ab648, #3addd5, 12px);
-    @include set_active((1, 2, 3, 4), 10em);
+    @include set_active((1, 2, 3), 10em);
 }

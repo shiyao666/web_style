@@ -78,19 +78,18 @@
         }
     }
     .active .card-head,
-    .active .card-body,
-        {
+    .active .card-body {
         $width_sum: 0;
         @each $width in $width_list {
             $width_sum: $width_sum + $width;
         }
         $num:0;
         @each $width in $width_list {
-            $num: $num+1;
+            $num: $num + 1;
             .card-item:nth-of-type(#{$num}) {
                 width: $width / $width_sum * 100%;
             }
-            .card-item::nth-of-type(#{$num}) {
+            .card-page:nth-of-type(#{$num}) {
                 width: $width / $width_sum * 100%;
             }
         }
