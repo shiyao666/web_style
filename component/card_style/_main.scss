@@ -37,17 +37,22 @@
         line-height: 1.5;
         border-bottom: 1px solid #ccc;
         color: $border_left_color;
+        overflow: hidden;
         .card-item {
             float: left;
         }
     }
     .card-body {
         display: block;
+        padding: 1em;
         width: 100%;
+        height: 9em;
+        transition: height .3s ease;
     }
     .card-foot {
         background-color: $border_left_color;
         display: block;
+        overflow: hidden;
     }
     & .active .card-head .inverse {
         background-color: $border_left_color;
@@ -70,15 +75,16 @@
         opacity: 1;
         transition: opacity .3s ease;
     }
-    .open {
-        height: $set_height;
-        transition: height .3s ease;
-        .card-foot {
-            display: none;
-        }
+    height: $set_height;
+    .active .card-body {
+        position: relative;
+    }
+    .active .card-body .card-item {
+        position: absolute;
     }
     .active .card-head,
-    .active .card-body {
+    .active .card-body,
+    .active .card-foot {
         $width_sum: 0;
         @each $width in $width_list {
             $width_sum: $width_sum + $width;
@@ -88,19 +94,46 @@
             $num: $num + 1;
             .card-item:nth-of-type(#{$num}) {
                 width: $width / $width_sum * 100%;
+                left: 0;
             }
             .card-page:nth-of-type(#{$num}) {
                 width: $width / $width_sum * 100%;
             }
         }
     }
-    .open-ctrl {
-        width: 100%;
-        height: 0;
+    .active .card-body {
         position: relative;
-        transition: height .3s ease;
     }
-    .open-ctrl::after {
+    .card-page {
+        border: none;
+        opacity: 0;
+    }
+    .card-page.active {
+        display: block;
+        opacity: 1;
+        transition: opacity .3s ease;
+    }
+    .active .card-body .card-page {
+        position: absolute;
+    }
+    .card-foot .card-item {
+        float: left;
+    }
+    .card-foot .active {
+        border: none;
+        position: relative;
+        transition: border .3s ease;
+    }
+    .open {
+        transition: height .3s ease;
+        .card-foot {
+            height: 0;
+        }
+        .card-body .card-page {
+            position: inherit;
+        }
+    }
+    .card-foot .active::after {
         position: absolute;
         content: ' ';
         width: 0;
@@ -109,9 +142,7 @@
         border-right: 10px solid transparent;
         border-top: 10px solid red;
         left: 50%;
-    }
-    .open-ctrl:hover {
-        height: 200px;
-        transition: height .3s ease;
+        margin-left: -10px;
+        margin-top: -4px;
     }
 }

@@ -11,86 +11,117 @@
   display: none;
   opacity: 0; }
 
-.crius-card-list .inverse {
-  color: blue; }
-.crius-card-list .active {
-  display: block;
-  border-radius: 12px;
-  border: 2px solid #ccc;
-  border-left-width: 10px;
-  border-left-color: #2ab648; }
-.crius-card-list::after {
-  content: ' ';
-  clear: both;
-  display: block;
-  visibility: hidden;
-  height: 0; }
-.crius-card-list .card-head {
-  display: block;
-  line-height: 1.5;
-  border-bottom: 1px solid #ccc;
-  color: #2ab648; }
-  .crius-card-list .card-head .card-item {
+.crius-card-list {
+  height: 10em; }
+  .crius-card-list .inverse {
+    color: blue; }
+  .crius-card-list .active {
+    display: block;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    border-left-width: 10px;
+    border-left-color: #2ab648; }
+  .crius-card-list::after {
+    content: ' ';
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0; }
+  .crius-card-list .card-head {
+    display: block;
+    line-height: 1.5;
+    border-bottom: 1px solid #ccc;
+    color: #2ab648;
+    overflow: hidden; }
+    .crius-card-list .card-head .card-item {
+      float: left; }
+  .crius-card-list .card-body {
+    display: block;
+    padding: 1em;
+    width: 100%;
+    height: 9em;
+    transition: height .3s ease; }
+  .crius-card-list .card-foot {
+    background-color: #2ab648;
+    display: block;
+    overflow: hidden; }
+  .crius-card-list .active .card-head .inverse {
+    background-color: #2ab648; }
+  .crius-card-list .move-in {
+    display: block;
+    opacity: 0;
+    transition: opacity .3s ease; }
+  .crius-card-list .move-out {
+    display: block;
+    opacity: 0;
+    transition: opacity .3s ease; }
+  .crius-card-list .active {
+    display: block;
+    opacity: 1;
+    transition: opacity .3s ease; }
+  .crius-card-list .active .card-body {
+    position: relative; }
+  .crius-card-list .active .card-body .card-item {
+    position: absolute; }
+  .crius-card-list .active .card-head .card-item:nth-of-type(1),
+  .crius-card-list .active .card-body .card-item:nth-of-type(1),
+  .crius-card-list .active .card-foot .card-item:nth-of-type(1) {
+    width: 16.6666666667%;
+    left: 0; }
+  .crius-card-list .active .card-head .card-page:nth-of-type(1),
+  .crius-card-list .active .card-body .card-page:nth-of-type(1),
+  .crius-card-list .active .card-foot .card-page:nth-of-type(1) {
+    width: 16.6666666667%; }
+  .crius-card-list .active .card-head .card-item:nth-of-type(2),
+  .crius-card-list .active .card-body .card-item:nth-of-type(2),
+  .crius-card-list .active .card-foot .card-item:nth-of-type(2) {
+    width: 33.3333333333%;
+    left: 0; }
+  .crius-card-list .active .card-head .card-page:nth-of-type(2),
+  .crius-card-list .active .card-body .card-page:nth-of-type(2),
+  .crius-card-list .active .card-foot .card-page:nth-of-type(2) {
+    width: 33.3333333333%; }
+  .crius-card-list .active .card-head .card-item:nth-of-type(3),
+  .crius-card-list .active .card-body .card-item:nth-of-type(3),
+  .crius-card-list .active .card-foot .card-item:nth-of-type(3) {
+    width: 50%;
+    left: 0; }
+  .crius-card-list .active .card-head .card-page:nth-of-type(3),
+  .crius-card-list .active .card-body .card-page:nth-of-type(3),
+  .crius-card-list .active .card-foot .card-page:nth-of-type(3) {
+    width: 50%; }
+  .crius-card-list .active .card-body {
+    position: relative; }
+  .crius-card-list .card-page {
+    border: none;
+    opacity: 0; }
+  .crius-card-list .card-page.active {
+    display: block;
+    opacity: 1;
+    transition: opacity .3s ease; }
+  .crius-card-list .active .card-body .card-page {
+    position: absolute; }
+  .crius-card-list .card-foot .card-item {
     float: left; }
-.crius-card-list .card-body {
-  display: block;
-  width: 100%; }
-.crius-card-list .card-foot {
-  background-color: #2ab648;
-  display: block; }
-.crius-card-list .active .card-head .inverse {
-  background-color: #2ab648; }
-.crius-card-list .move-in {
-  display: block;
-  opacity: 0;
-  transition: opacity .3s ease; }
-.crius-card-list .move-out {
-  display: block;
-  opacity: 0;
-  transition: opacity .3s ease; }
-.crius-card-list .active {
-  display: block;
-  opacity: 1;
-  transition: opacity .3s ease; }
-.crius-card-list .open {
-  height: 10em;
-  transition: height .3s ease; }
-  .crius-card-list .open .card-foot {
-    display: none; }
-.crius-card-list .active .card-head .card-item:nth-of-type(1),
-.crius-card-list .active .card-body .card-item:nth-of-type(1) {
-  width: 16.6666666667%; }
-.crius-card-list .active .card-head .card-page:nth-of-type(1),
-.crius-card-list .active .card-body .card-page:nth-of-type(1) {
-  width: 16.6666666667%; }
-.crius-card-list .active .card-head .card-item:nth-of-type(2),
-.crius-card-list .active .card-body .card-item:nth-of-type(2) {
-  width: 33.3333333333%; }
-.crius-card-list .active .card-head .card-page:nth-of-type(2),
-.crius-card-list .active .card-body .card-page:nth-of-type(2) {
-  width: 33.3333333333%; }
-.crius-card-list .active .card-head .card-item:nth-of-type(3),
-.crius-card-list .active .card-body .card-item:nth-of-type(3) {
-  width: 50%; }
-.crius-card-list .active .card-head .card-page:nth-of-type(3),
-.crius-card-list .active .card-body .card-page:nth-of-type(3) {
-  width: 50%; }
-.crius-card-list .open-ctrl {
-  width: 100%;
-  height: 0;
-  position: relative;
-  transition: height .3s ease; }
-.crius-card-list .open-ctrl::after {
-  position: absolute;
-  content: ' ';
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid red;
-  left: 50%; }
-.crius-card-list .open-ctrl:hover {
-  height: 200px;
-  transition: height .3s ease; }
+  .crius-card-list .card-foot .active {
+    border: none;
+    position: relative;
+    transition: border .3s ease; }
+  .crius-card-list .open {
+    transition: height .3s ease; }
+    .crius-card-list .open .card-foot {
+      height: 0; }
+    .crius-card-list .open .card-body .card-page {
+      position: inherit; }
+  .crius-card-list .card-foot .active::after {
+    position: absolute;
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid red;
+    left: 50%;
+    margin-left: -10px; }
 
 /*# sourceMappingURL=card.css.map */
