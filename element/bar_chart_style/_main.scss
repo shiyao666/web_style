@@ -35,6 +35,9 @@ body {
     @include set_color($set_color);
 }
 
+$paragraph4:( //    weight            color                           style
+width:            0.1*$weight1     saturate($color1, 60%)             solid
+ );
 @mixin set_color($data) {
     @each $color in $data {
         $n: index($data, $color);

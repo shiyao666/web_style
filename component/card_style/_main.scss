@@ -4,15 +4,26 @@
     box-sizing: border-box;
 }
 
-@mixin set_card( $btn_height, $padding_left_right, $bor_left_width, $body_form, $border_left_color, $cfb_g_cl, $border_radius) {
-    & {
-        display: block;
+.card-project {
+    display: none;
+    opacity: 0;
+}
 
+.card {
+    display: none;
+    opacity: 0;
+}
+
+@mixin set_card( $bor_left_width, $body_form, $border_left_color, $cfb_g_cl, $border_radius) {
+    .inverse {
+        color: blue;
+    }
+    & .active {
+        display: block;
         border-radius: $border_radius;
         border: 2px solid #ccc;
         border-left-width: $bor_left_width;
         border-left-color: $border_left_color;
-        padding: 0 $padding_left_right;
     }
     &::after {
         content: ' ';
@@ -22,36 +33,86 @@
         height: 0;
     }
     .card-head {
-        float: left;
         display: block;
         line-height: 1.5;
         border-bottom: 1px solid #ccc;
-        .card-head-left {
-            overflow: hidden;
-            width: (nth($body_form, 1) / (nth($body_form, 1) + nth($body_form, 2))) * 100%;
-        }
-        .card-head-right {
-            overflow: hidden;
-            width: (nth($body_form, 2) / (nth($body_form, 1) + nth($body_form, 2))) * 100%;
+        color: $border_left_color;
+        .card-item {
+            float: left;
         }
     }
     .card-body {
-        float: left;
+        display: block;
         width: 100%;
     }
-    .card-body-left {
-        float: left;
-        overflow: hidden;
-        width: (nth($body_form, 1) / (nth($body_form, 1) + nth($body_form, 2))) * 100%;
-    }
-    .card-body-right {
-        float: left;
-        overflow: hidden;
-        width: (nth($body_form, 2) / (nth($body_form, 1) + nth($body_form, 2))) * 100%;
-    }
     .card-foot {
-        float: left;
-        margin-bottom: -#{$btn_height};
+        background-color: $border_left_color;
+        display: block;
     }
+    & .active .card-head .inverse {
+        background-color: $border_left_color;
+    }
+}
 
+@mixin set_active($width_list, $set_height) {
+    .move-in {
+        display: block;
+        opacity: 0;
+        transition: opacity .3s ease;
+    }
+    .move-out {
+        display: block;
+        opacity: 0;
+        transition: opacity .3s ease;
+    }
+    .active {
+        display: block;
+        opacity: 1;
+        transition: opacity .3s ease;
+    }
+    .open {
+        height: $set_height;
+        transition: height .3s ease;
+        .card-foot {
+            display: none;
+        }
+    }
+    .active .card-head,
+    .active .card-body,
+        {
+        $width_sum: 0;
+        @each $width in $width_list {
+            $width_sum: $width_sum + $width;
+        }
+        $num:0;
+        @each $width in $width_list {
+            $num: $num+1;
+            .card-item:nth-of-type(#{$num}) {
+                width: $width / $width_sum * 100%;
+            }
+            .card-item::nth-of-type(#{$num}) {
+                width: $width / $width_sum * 100%;
+            }
+        }
+    }
+    .open-ctrl {
+        width: 100%;
+        height: 0;
+        position: relative;
+        transition: height .3s ease;
+    }
+    .open-ctrl::after {
+        position: absolute;
+        content: ' ';
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid red;
+        left: 50%;
+    }
+    .open-ctrl:hover {
+        height: 200px;
+        transition: height .3s ease;
+    }
 }
