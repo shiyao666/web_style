@@ -18,12 +18,16 @@
     .inverse {
         color: blue;
     }
-    & .active {
+    .active {
         display: block;
         border-radius: $border_radius;
         border: 2px solid #ccc;
         border-left-width: $bor_left_width;
         border-left-color: $border_left_color;
+        .card-foot {
+            border-bottom-right-radius: $border_radius;
+            background: $border_left_color;
+        }
     }
     &::after {
         content: ' ';
@@ -50,7 +54,6 @@
         transition: height .3s ease;
     }
     .card-foot {
-        background-color: $border_left_color;
         display: block;
         overflow: hidden;
     }
@@ -132,8 +135,12 @@
         .card-body .card-page {
             position: inherit;
         }
+        .open-ctrl {
+            background-image: url(openline.svg);
+            background-repeat: no-repeat;
+        }
     }
-    .card-foot .active::after {
+    .card-foot .active::before {
         position: absolute;
         content: ' ';
         width: 0;
@@ -144,5 +151,21 @@
         left: 50%;
         margin-left: -10px;
         margin-top: -4px;
+    }
+    .card-foot .active::after {
+        position: absolute;
+        content: ' ';
+        bottom: 0;
+        width: 10em;
+        left: 50%;
+        margin-left: -5em;
+        height: 10px;
+        background-color: #fff;
+    }
+    .open-ctrl {
+        height: 1em;
+        background-image: url(closeline.svg);
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }

@@ -21,6 +21,9 @@
     border: 2px solid #ccc;
     border-left-width: 10px;
     border-left-color: #2ab648; }
+    .crius-card-list .active .card-foot {
+      border-bottom-right-radius: 12px;
+      background: #2ab648; }
   .crius-card-list::after {
     content: ' ';
     clear: both;
@@ -42,7 +45,6 @@
     height: 9em;
     transition: height .3s ease; }
   .crius-card-list .card-foot {
-    background-color: #2ab648;
     display: block;
     overflow: hidden; }
   .crius-card-list .active .card-head .inverse {
@@ -113,7 +115,10 @@
       height: 0; }
     .crius-card-list .open .card-body .card-page {
       position: inherit; }
-  .crius-card-list .card-foot .active::after {
+    .crius-card-list .open .open-ctrl {
+      background-image: url(openline.svg);
+      background-repeat: no-repeat; }
+  .crius-card-list .card-foot .active::before {
     position: absolute;
     content: ' ';
     width: 0;
@@ -122,6 +127,21 @@
     border-right: 10px solid transparent;
     border-top: 10px solid red;
     left: 50%;
-    margin-left: -10px; }
+    margin-left: -10px;
+    margin-top: -4px; }
+  .crius-card-list .card-foot .active::after {
+    position: absolute;
+    content: ' ';
+    bottom: 0;
+    width: 10em;
+    left: 50%;
+    margin-left: -5em;
+    height: 10px;
+    background-color: #fff; }
+  .crius-card-list .open-ctrl {
+    height: 1em;
+    background-image: url(closeline.svg);
+    background-repeat: no-repeat;
+    background-position: center; }
 
 /*# sourceMappingURL=card.css.map */
