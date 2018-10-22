@@ -14,7 +14,7 @@
     opacity: 0;
 }
 
-@mixin set_card( $bor_left_width, $body_form, $border_left_color, $cfb_g_cl, $border_radius) {
+@mixin set_card( $bor_left_width, $border_left_color, $cfb_g_cl, $border_radius) {
     .inverse {
         color: blue;
     }
@@ -79,12 +79,6 @@
         transition: opacity .3s ease;
     }
     height: $set_height;
-    .active .card-body {
-        position: relative;
-    }
-    .active .card-body .card-item {
-        position: absolute;
-    }
     .active .card-head,
     .active .card-body,
     .active .card-foot {
@@ -129,6 +123,7 @@
     }
     .open {
         transition: height .3s ease;
+        height: 20em;
         .card-foot {
             height: 0;
         }
@@ -159,7 +154,7 @@
         width: 10em;
         left: 50%;
         margin-left: -5em;
-        height: 10px;
+        height: 4px;
         background-color: #fff;
     }
     .open-ctrl {

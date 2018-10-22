@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>card</title>
     <link rel="stylesheet" href="css/card.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/set_demo.js"></script>
 </head>
 
 <body>
@@ -39,17 +41,17 @@
                 <div class="card-item inverse">312143</div>
                 <div class="card-item">4641653</div>
             </div>
-            <div class="card-body">
+            <div class="card-body" id="open_close">
                 <div class="card-page">
                     <div class="card-page-box">455</div>
                 </div>
-                <div class="card-page">52651</div>
-                <div class="card-page">2130</div>
+                <div class="card-page" id='card_page_active'>52651</div>
+                <div class=" card-page">2130</div>
             </div>
             <div class="open-ctrl"></div>
             <div class="card-foot">
                 <div class="card-item inverse"><input type="button" value="预算"></div>
-                <div class="card-item inverse"><input type="button" value="决算"></div>
+                <div class="card-item inverse" id="active_modular"><input type="button" value="决算"></div>
                 <div class="card-item inverse"><input type="button" value="总计"></div>
             </div>
         </div>
@@ -73,12 +75,14 @@
             </div>
         </div>
     </div>
-    <!-- 
-            card-project状态[:hover, .active, default]
-            card-item:[.inverse, default]
-            card-page:[.active,.move-in,.move-out,default] 
-            card-page-box:[.open,default]
-        -->
+    <div class="input_list">
+        <input type="button" value="点击添加item_page状态" id="creat_item_state">
+        <input type="button" value="点击删除item_page状态" id="del_item_state">
+        <input type="button" value="点击body_内容扩展" id="creat_body_content">
+        <input type="button" value="点击body_内容删除" id="del_body_content">
+        <input type="button" value="点击展示底部活动模块" id="creat_foot_active">
+        <input type="button" value="点击隐藏底部活动模块" id="del_foot_active">
+    </div>
 </body>
 
 </html>

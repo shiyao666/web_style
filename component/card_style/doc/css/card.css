@@ -11,6 +11,9 @@
   display: none;
   opacity: 0; }
 
+input {
+  float: left; }
+
 .crius-card-list {
   height: 10em; }
   .crius-card-list .inverse {
@@ -53,27 +56,19 @@
     display: block;
     opacity: 0;
     transition: opacity .3s ease; }
-  .crius-card-list .move-out {
-    display: block;
-    opacity: 0;
-    transition: opacity .3s ease; }
   .crius-card-list .active {
     display: block;
     opacity: 1;
     transition: opacity .3s ease; }
-  .crius-card-list .active .card-body {
-    position: relative; }
-  .crius-card-list .active .card-body .card-item {
-    position: absolute; }
   .crius-card-list .active .card-head .card-item:nth-of-type(1),
   .crius-card-list .active .card-body .card-item:nth-of-type(1),
   .crius-card-list .active .card-foot .card-item:nth-of-type(1) {
-    width: 16.6666666667%;
+    width: 33.3333333333%;
     left: 0; }
   .crius-card-list .active .card-head .card-page:nth-of-type(1),
   .crius-card-list .active .card-body .card-page:nth-of-type(1),
   .crius-card-list .active .card-foot .card-page:nth-of-type(1) {
-    width: 16.6666666667%; }
+    width: 33.3333333333%; }
   .crius-card-list .active .card-head .card-item:nth-of-type(2),
   .crius-card-list .active .card-body .card-item:nth-of-type(2),
   .crius-card-list .active .card-foot .card-item:nth-of-type(2) {
@@ -86,12 +81,12 @@
   .crius-card-list .active .card-head .card-item:nth-of-type(3),
   .crius-card-list .active .card-body .card-item:nth-of-type(3),
   .crius-card-list .active .card-foot .card-item:nth-of-type(3) {
-    width: 50%;
+    width: 33.3333333333%;
     left: 0; }
   .crius-card-list .active .card-head .card-page:nth-of-type(3),
   .crius-card-list .active .card-body .card-page:nth-of-type(3),
   .crius-card-list .active .card-foot .card-page:nth-of-type(3) {
-    width: 50%; }
+    width: 33.3333333333%; }
   .crius-card-list .active .card-body {
     position: relative; }
   .crius-card-list .card-page {
@@ -110,7 +105,8 @@
     position: relative;
     transition: border .3s ease; }
   .crius-card-list .open {
-    transition: height .3s ease; }
+    transition: height .3s ease;
+    height: 20em; }
     .crius-card-list .open .card-foot {
       height: 0; }
     .crius-card-list .open .card-body .card-page {
@@ -136,12 +132,16 @@
     width: 10em;
     left: 50%;
     margin-left: -5em;
-    height: 10px;
+    height: 4px;
     background-color: #fff; }
   .crius-card-list .open-ctrl {
     height: 1em;
     background-image: url(closeline.svg);
     background-repeat: no-repeat;
     background-position: center; }
+
+.input_list {
+  position: fixed;
+  bottom: 10em; }
 
 /*# sourceMappingURL=card.css.map */
