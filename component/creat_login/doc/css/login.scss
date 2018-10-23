@@ -1,4 +1,4 @@
 @import '../../main';
 .login {
-    @include creat_login_style(#26216e, 20px);
+    @include creat_login_style(#26216e, 20px, 40px);
 }
