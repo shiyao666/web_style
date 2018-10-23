@@ -1,0 +1,4 @@
+@import '../../main';
+.login {
+    @include creat_login_style(#26226f, 20px);
+}

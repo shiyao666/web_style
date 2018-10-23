@@ -14,9 +14,9 @@
     opacity: 0;
 }
 
-@mixin set_card( $bor_left_width, $border_left_color, $cfb_g_cl, $border_radius) {
+@mixin set_card($bor_left_width, $border_left_color, $border_radius) {
     .inverse {
-        color: blue;
+        color: #fff;
     }
     .active {
         display: block;
@@ -27,6 +27,10 @@
         .card-foot {
             border-bottom-right-radius: $border_radius;
             background: $border_left_color;
+            height: 2em;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
     }
     &::after {
@@ -37,8 +41,10 @@
         height: 0;
     }
     .card-head {
+        text-align: center;
         display: block;
-        line-height: 1.5;
+        height: 2em;
+        line-height: 2em;
         border-bottom: 1px solid #ccc;
         color: $border_left_color;
         overflow: hidden;
@@ -50,37 +56,48 @@
         display: block;
         padding: 1em;
         width: 100%;
-        height: 9em;
-        transition: height .3s ease;
     }
     .card-foot {
         display: block;
+        height: 2em;
         overflow: hidden;
+        input {
+            display: block;
+            outline: none;
+            width: 100%;
+            color: #fff;
+            border: none;
+            background-color: $border_left_color;
+            height: 2em;
+            line-height: 2.7em;
+        }
     }
     & .active .card-head .inverse {
         background-color: $border_left_color;
     }
 }
 
-@mixin set_active($width_list, $set_height) {
+@mixin set_active($width_list, $set_height,$set_minheight ) {
+    .open-ctrl {
+        height: 1em;
+        background-image: url(openline.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 90%;
+        position: absolute;
+        bottom: 2.1em;
+        width: 100%;
+    }
     .move-in {
         display: block;
         opacity: 0;
-        transition: opacity .3s ease;
-    }
-    .move-out {
-        display: block;
-        opacity: 0;
-        transition: opacity .3s ease;
     }
     .active {
         display: block;
         opacity: 1;
-        transition: opacity .3s ease;
+        position: relative;
     }
-    height: $set_height;
     .active .card-head,
-    .active .card-body,
     .active .card-foot {
         $width_sum: 0;
         @each $width in $width_list {
@@ -93,21 +110,22 @@
                 width: $width / $width_sum * 100%;
                 left: 0;
             }
-            .card-page:nth-of-type(#{$num}) {
-                width: $width / $width_sum * 100%;
-            }
         }
     }
-    .active .card-body {
+    .card-body {
         position: relative;
+        height: $set_minheight;
+        transition: height .3s cubic-bezier(0.4, 0, 1, 1);
     }
     .card-page {
         border: none;
         opacity: 0;
+        transition: opacity .3s ease;
     }
     .card-page.active {
         display: block;
         opacity: 1;
+        height: auto;
         transition: opacity .3s ease;
     }
     .active .card-body .card-page {
@@ -117,22 +135,32 @@
         float: left;
     }
     .card-foot .active {
+        height: 2em;
         border: none;
         position: relative;
         transition: border .3s ease;
     }
     .open {
-        transition: height .3s ease;
-        height: 20em;
         .card-foot {
             height: 0;
         }
+        .card-body{
+            height: initial;
+        }
         .card-body .card-page {
-            position: inherit;
+            transition: opacity .3s ease;
+            opacity: 1;
+            position: initial;
         }
         .open-ctrl {
-            background-image: url(openline.svg);
+            background-image: url(closeline.svg);
             background-repeat: no-repeat;
+            bottom: 2px;
+        }
+    }
+    .open.move-out {
+        .card-body {
+            height: $set_height;
         }
     }
     .card-foot .active::before {
@@ -140,9 +168,9 @@
         content: ' ';
         width: 0;
         height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid red;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        border-top: 10px solid #fff;
         left: 50%;
         margin-left: -10px;
         margin-top: -4px;
@@ -150,17 +178,11 @@
     .card-foot .active::after {
         position: absolute;
         content: ' ';
-        bottom: 0;
+        bottom: 0px;
         width: 10em;
         left: 50%;
         margin-left: -5em;
-        height: 4px;
+        height: 2px;
         background-color: #fff;
-    }
-    .open-ctrl {
-        height: 1em;
-        background-image: url(closeline.svg);
-        background-repeat: no-repeat;
-        background-position: center;
     }
 }

@@ -1,0 +1,45 @@
+.login {
+  position: fixed;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #26226f;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  .login .login_window {
+    box-sizing: border-box;
+    padding: 80px 40px;
+    background: #000;
+    opacity: 0.8;
+    width: 480px;
+    border: 1px solid #ccc;
+    height: 320px;
+    margin: auto; }
+    .login .login_window input {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      outline: none;
+      background: #fff;
+      border: none;
+      height: 40px;
+      padding-left: 10px; }
+    .login .login_window button {
+      outline: none;
+      border: none;
+      width: 100%;
+      height: 40px;
+      color: #fff;
+      background: #26226f; }
+  .login .user_name,
+  .login .pass_word {
+    padding-bottom: 20px; }
+  @media screen and (max-width: 768px) {
+    .login .login_window {
+      margin: auto 1em;
+      padding: 80px 20px; } }
+
+/*# sourceMappingURL=login.css.map */

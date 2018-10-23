@@ -12,76 +12,84 @@
 </head>
 
 <body>
-    <div class="menu"></div>
-    <div class="crius-card-list">
-        <!-- 克瑞斯卡片 -->
-        <div class="card">
-            <div class="card-head">
-                <div class="card-item">
-                    <div class="text"></div>
+    <div class="c">
+        <div class="crius-card-list">
+            <!-- 克瑞斯卡片 -->
+            <div class="card">
+                <div class="card-head">
+                    <div class="card-item">
+                        <div class="text">项目类型</div>
+                    </div>
+                    <div class="card-item inverse">项目编号</div>
+                    <div class="card-item">班主任</div>
                 </div>
-                <div class="card-item inverse">1544</div>
-                <div class="card-item">56446</div>
-            </div>
-            <div class="card-body">
-                <div class="card-page">
+                <div class="card-body">
+                    <div class="card-page">
+                    </div>
+                    <div class="card-page">23566</div>
+                    <div class="card-page">23566</div>
                 </div>
-                <div class="card-page">23566</div>
-                <div class="card-page">23566</div>
+                <div class="card-foot">
+                    <div class="card-item inverse"><input type="button" value="展示信息"></div>
+                    <div class="card-item inverse"><input type="button" value="编辑项目"></div>
+                    <div class="card-item inverse"><input type="button" value="编辑项目"></div>
+                </div>
             </div>
-            <div class="card-foot">
-                <div class="card-item inverse">4155413</div>
-                <div class="card-item inverse">4155413</div>
-                <div class="card-item inverse">4155413</div>
+            <div class="card-project active" id="open_close">
+                <div class="card-head">
+                    <div class="card-item">项目类型</div>
+                    <div class="card-item inverse">项目编号</div>
+                    <div class="card-item">班主任</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-page active"  id='card_page'>
+                        <div class="card-page-box">455</div>
+                    </div>
+                    <div class="card-page" id='card_page_active'>
+                        <div class="date—style">
+                            <div class="card_day">11</div>
+                            <div class="card_month">10</div>
+                            <div class="card_year">2018</div>
+                        </div>
+                    </div>
+                    <div class=" card-page" style="height:30em">2130</div>
+                </div>
+                <div class="open-ctrl"></div>
+                <div class="card-foot">
+                    <div class="card-item inverse" id="active_modular"><input type="button" value="展示信息"></div>
+                    <div class="card-item inverse"><input type="button" value="编辑项目"></div>
+                    <div class="card-item inverse"><input type="button" value="总计"></div>
+                </div>
+            </div>
+            <div class="card-project">
+                <div class="card-head">
+                    <div class="card-item">项目类型</div>
+                    <div class="card-item inverse">项目编号</div>
+                    <div class="card-item">班主任</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-page">
+                        <div class="card-page-box">654654</div>
+                    </div>
+                    <div class="card-page  active">654654</div>
+                    <div class="card-page">654654</div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-item inverse"><input type="button" value="展示信息"></div>
+                    <div class="card-item inverse"><input type="button" value="编辑项目"></div>
+                    <div class="card-item inverse"><input type="button" value="编辑项目"></div>
+                </div>
             </div>
         </div>
-        <div class="card-project active">
-            <div class="card-head">
-                <div class="card-item">23465</div>
-                <div class="card-item inverse">312143</div>
-                <div class="card-item">4641653</div>
-            </div>
-            <div class="card-body" id="open_close">
-                <div class="card-page">
-                    <div class="card-page-box">455</div>
-                </div>
-                <div class="card-page" id='card_page_active'>52651</div>
-                <div class=" card-page">2130</div>
-            </div>
-            <div class="open-ctrl"></div>
-            <div class="card-foot">
-                <div class="card-item inverse"><input type="button" value="预算"></div>
-                <div class="card-item inverse" id="active_modular"><input type="button" value="决算"></div>
-                <div class="card-item inverse"><input type="button" value="总计"></div>
-            </div>
+        <div class="input_list">
+            <input type="button" value="item_page动画中间状态" id="creat_item_state" />
+            <input type="button" value="item_page动画结束状态" id="del_item_state" /> <br />
+            <input type="button" value="body动画中间状态" id="creat_body_content" />
+            <input type="button" value="body动画结束状态" id="del_body_content" />
+            <input type="button" value="body动画重置" id="del_body_reset" />
+            <input type="button" value="展示底部活动模块" id="creat_foot_active" />
+            <input type="button" value="隐藏底部活动模块" id="del_foot_active" />
         </div>
-        <div class="card-project">
-            <div class="card-head">
-                <div class="card-item">246561</div>
-                <div class="card-item inverse">654651</div>
-                <div class="card-item">654654</div>
-            </div>
-            <div class="card-body">
-                <div class="card-page">
-                    <div class="card-page-box">654654</div>
-                </div>
-                <div class="card-page">654654</div>
-                <div class="card-page">654654</div>
-            </div>
-            <div class="card-foot">
-                <div class="card-item inverse"><input type="button" value="预算"></div>
-                <div class="card-item inverse"><input type="button" value="决算"></div>
-                <div class="card-item inverse"><input type="button" value="总计"></div>
-            </div>
-        </div>
-    </div>
-    <div class="input_list">
-        <input type="button" value="点击添加item_page状态" id="creat_item_state">
-        <input type="button" value="点击删除item_page状态" id="del_item_state">
-        <input type="button" value="点击body_内容扩展" id="creat_body_content">
-        <input type="button" value="点击body_内容删除" id="del_body_content">
-        <input type="button" value="点击展示底部活动模块" id="creat_foot_active">
-        <input type="button" value="点击隐藏底部活动模块" id="del_foot_active">
     </div>
 </body>
 
