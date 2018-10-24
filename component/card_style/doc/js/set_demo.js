@@ -2,7 +2,6 @@ $(document).ready(function () {
     $('#creat_item_state').bind('click', function () {
         $('#card_page_active').addClass('move-in');
         $('#card_page_active').addClass('active');
-        $('#card_page').addClass('move-out');
         $('#card_page').removeClass('active');
     });
     $('#del_item_state').bind('click', function () {
