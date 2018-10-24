@@ -61,29 +61,24 @@
         display: block;
         height: 2em;
         overflow: hidden;
-        input {
-            display: block;
-            outline: none;
-            width: 100%;
-            color: #fff;
-            border: none;
-            background-color: $border_left_color;
-            height: 2em;
-            line-height: 2.7em;
-        }
+        color: #fff;
+        text-align: center;
+        background-color: $border_left_color;
+        height: 2em;
+        line-height: 2em;
     }
     & .active .card-head .inverse {
         background-color: $border_left_color;
     }
 }
 
-@mixin set_active($width_list, $set_height,$set_minheight ) {
+@mixin set_active($width_list, $set_height, $set_minheight) {
     .open-ctrl {
         height: 1em;
         background-image: url(openline.svg);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 90%;
+        background-size: 70%;
         position: absolute;
         bottom: 2.1em;
         width: 100%;
@@ -117,15 +112,14 @@
         height: $set_minheight;
         transition: height .3s cubic-bezier(0.4, 0, 1, 1);
     }
-    .card-page {
-        border: none;
-        opacity: 0;
-        transition: opacity .3s ease;
-    }
     .card-page.active {
         display: block;
         opacity: 1;
         height: auto;
+    }
+    .card-page {
+        border: none;
+        opacity: 0;
         transition: opacity .3s ease;
     }
     .active .card-body .card-page {
@@ -140,11 +134,16 @@
         position: relative;
         transition: border .3s ease;
     }
+    .open.move-out {
+        .card-body {
+            height: $set_height;
+        }
+    }
     .open {
         .card-foot {
             height: 0;
         }
-        .card-body{
+        .card-body {
             height: initial;
         }
         .card-body .card-page {
@@ -156,11 +155,6 @@
             background-image: url(closeline.svg);
             background-repeat: no-repeat;
             bottom: 2px;
-        }
-    }
-    .open.move-out {
-        .card-body {
-            height: $set_height;
         }
     }
     .card-foot .active::before {
@@ -179,7 +173,7 @@
         position: absolute;
         content: ' ';
         bottom: 0px;
-        width: 10em;
+        width: 9em;
         left: 50%;
         margin-left: -5em;
         height: 2px;
