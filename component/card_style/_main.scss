@@ -45,7 +45,6 @@
     .card-body {
         display: block;
         padding: 1em;
-        width: 100%;
     }
     .card-foot {
         display: block;
@@ -105,7 +104,6 @@
     .card-page {
         border: none;
         opacity: 0;
-        transition: opacity .3s ease;
     }
     .card-page.active {
         display: block;
@@ -130,12 +128,13 @@
             height: 0;
         }
         .card-body {
-            height: 30em;
+            height: $set_height;
+            transition: height .3s cubic-bezier(0.4, 0, 1, 1);
         }
         .card-body .card-page {
-            transition: opacity .3s ease;
             opacity: 1;
             position: initial;
+            transition: none;
         }
         .open-ctrl {
             background-image: url(closeline.svg);

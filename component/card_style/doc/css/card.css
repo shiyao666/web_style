@@ -40,8 +40,7 @@ input {
     float: left; }
 .crius-card-list .card-body {
   display: block;
-  padding: 1em;
-  width: 100%; }
+  padding: 1em; }
 .crius-card-list .card-foot {
   display: block;
   height: 2em;
@@ -87,8 +86,7 @@ input {
   transition: height 0.3s cubic-bezier(0.4, 0, 1, 1); }
 .crius-card-list .card-page {
   border: none;
-  opacity: 0;
-  transition: opacity .3s ease; }
+  opacity: 0; }
 .crius-card-list .card-page.active {
   display: block;
   opacity: 1;
@@ -106,11 +104,12 @@ input {
 .crius-card-list .open .card-foot {
   height: 0; }
 .crius-card-list .open .card-body {
-  height: 30em; }
+  height: 22em;
+  transition: height 0.3s cubic-bezier(0.4, 0, 1, 1); }
 .crius-card-list .open .card-body .card-page {
-  transition: opacity .3s ease;
   opacity: 1;
-  position: initial; }
+  position: initial;
+  transition: none; }
 .crius-card-list .open .open-ctrl {
   background-image: url(closeline.svg);
   background-repeat: no-repeat;
