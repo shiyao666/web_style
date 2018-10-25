@@ -1,6 +1,4 @@
 @import '../../main';
-.alert_box.open {
-    width: 20em;
-    height: 15em;
+.alert_back {
     @include set_prompt(#fbb61d, 1em, #464d77, 10px);
 }

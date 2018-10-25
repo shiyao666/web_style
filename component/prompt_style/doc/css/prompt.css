@@ -1,53 +1,72 @@
-.alert_box.open {
-  width: 20em;
-  height: 15em;
-  position: relative;
-  border: 1px solid #464d77;
-  border-radius: 10px;
-  background: #464d77;
-  padding: 0.5em 1em 1em 1em;
-  overflow: hidden;
-  margin: auto;
-  margin-top: 10em; }
-  .alert_box.open h2 {
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-    padding: 0;
-    font-size: 16px; }
-  .alert_box.open p {
-    display: block;
-    height: 8em;
-    color: #464d77;
-    background-color: #fff;
-    padding: 10px 8px;
-    margin-bottom: 1em;
-    border-radius: 10px;
+.alert_back {
+  width: 0;
+  height: 0; }
+  .alert_back .alert_box {
+    width: 0;
+    height: 0;
     overflow: hidden; }
-  .alert_box.open button {
-    display: block;
-    height: 2em;
-    width: 4em;
-    background: #464d77;
-    color: #fbb61d;
-    border-radius: 2px;
-    border: 1px solid #fbb61d;
-    overflow: hidden;
-    outline: none; }
-  .alert_box.open button:nth-of-type(1) {
-    position: absolute;
-    left: 2em;
-    bottom: 1em; }
-  .alert_box.open button:nth-of-type(2) {
-    position: absolute;
-    right: 2em;
-    bottom: 1em; }
-  .alert_box.open button.active {
-    background: #fbb61d;
-    overflow: hidden;
-    color: #464d77; }
-  @media screen and (max-width: 768px) {
-    .alert_box.open {
-      margin-top: 12em; } }
+  .alert_back.open {
+    position: fixed;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.28); }
+  .alert_back .alert_box.open {
+    position: relative;
+    box-sizing: border-box;
+    width: 400px;
+    height: 300px;
+    background-color: #464d77;
+    margin: auto;
+    padding: 0.5em 1em 1em 1em;
+    border-radius: 10px; }
+    .alert_back .alert_box.open h2 {
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      padding: 0;
+      font-size: 16px; }
+    .alert_back .alert_box.open p {
+      display: block;
+      height: 10em;
+      color: #464d77;
+      background-color: #fff;
+      padding: 10px 8px;
+      margin-bottom: 1em;
+      border-radius: 10px;
+      overflow: hidden; }
+    .alert_back .alert_box.open button {
+      display: block;
+      height: 2em;
+      width: 4em;
+      background: #464d77;
+      color: #fbb61d;
+      border-radius: 2px;
+      border: 1px solid #fbb61d;
+      overflow: hidden;
+      outline: none; }
+    .alert_back .alert_box.open button:nth-of-type(1) {
+      position: absolute;
+      left: 2em;
+      bottom: 1em; }
+    .alert_back .alert_box.open button:nth-of-type(2) {
+      position: absolute;
+      right: 2em;
+      bottom: 1em; }
+    .alert_back .alert_box.open button.active {
+      background: #fbb61d;
+      overflow: hidden;
+      color: #464d77; }
+    .alert_back .alert_box.open button:hover {
+      background: #fbb61d;
+      overflow: hidden;
+      color: #464d77; }
+    @media screen and (max-width: 768px) {
+      .alert_back .alert_box.open {
+        margin: auto 1em; } }
 
 /*# sourceMappingURL=prompt.css.map */
