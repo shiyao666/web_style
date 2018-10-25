@@ -65,7 +65,8 @@ input {
 .crius-card-list .active {
   display: block;
   opacity: 1;
-  position: relative; }
+  position: relative;
+  margin-bottom: 3em; }
 .crius-card-list .card-head .card-item:nth-of-type(1),
 .crius-card-list .card-foot .card-item:nth-of-type(1) {
   width: 33.3333333333%;
