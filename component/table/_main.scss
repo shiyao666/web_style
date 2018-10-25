@@ -1,5 +1,3 @@
-
-
 $weight1:1em;
 $color1:#ff00ff;
 $paragraph3:( // key    weight                color                           style
@@ -341,21 +339,32 @@ table {
     }
 }
 
-@mixin set_title_space($height) {
-    thead {
-        &:after {
-            content: " ";
-            display: table-row;
-            height: $height;
-            background-color: transparent;
+@mixin set_title_space($height, $type) {
+    @if ($type==1) {
+        thead {
+            &:after {
+                content: " ";
+                display: table-row;
+                height: $height;
+                background-color: transparent;
+            }
+        }
+        tfoot {
+            &:before {
+                content: " ";
+                display: table-row;
+                height: $height;
+            }
         }
     }
-    tfoot {
-        &:before {
-            content: " ";
-            display: table-row;
-            height: $height;
+    @if ($type==2) {
+        thead {
+            &:after {
+                content: " ";
+                display: table-row;
+                height: $height;
+                background-color: transparent;
+            }
         }
     }
 }
-

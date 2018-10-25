@@ -3,6 +3,14 @@
     display: none;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    table {
+        border-collapse: collapse;
+    }
+}
+
 .art1 {
     //              line-height  align   padding  margin 
     $table_base_tr: 1.5em left (1em 0) (0);
@@ -10,9 +18,8 @@
     $table_base_th: 1.5em left (1em 0.5em) (0);
     $table_base: ( tr: $table_base_tr, td:$table_base_td, th: $table_base_th, );
     @include creat_table($table_base); //
-    //@include set_init(1);
-    //设置是否有标题空隙
-    @include set_title_space(1em); //设置格线
+    // @include set_init(1); //设置是否有标题空隙
+    @include set_title_space(1em, 2); //设置格线
     $table_title_line: 1px solid #666;
     $table_content_line: 1px solid #ddd;
     $table_out_line: 1px solid #000;
@@ -23,10 +30,10 @@
     // @include set_x_out_line($table_out_line); //
     // @include set_y_out_line($table_out_line);
     //设置颜色
-    $table_title_bgcolor: (#fff #000 #aaf #00d);
-    $table_content_x_bgcolor: (#fff rgba(0, 0, 0, .2) #fff rgba(0, 0, 0, .3));
-    $table_content_y_bgcolor: (#fff rgba(0, 0, 0, .2) #fff rgba(0, 0, 0, .3));
-    $table_content_x_y_bgcolor: (#000 #fff #fff #000); // @include set_x_title_bgcolor($table_title_bgcolor);//
+    // $table_title_bgcolor: (#fff #000 #aaf #00d);
+    // $table_content_x_bgcolor: (#fff rgba(0, 0, 0, .2) #fff rgba(0, 0, 0, .3));
+    // $table_content_y_bgcolor: (#fff rgba(0, 0, 0, .2) #fff rgba(0, 0, 0, .3));
+    // $table_content_x_y_bgcolor: (#000 #fff #fff #000); // @include set_x_title_bgcolor($table_title_bgcolor);//
     // @include set_y_title_bgcolor($table_title_bgcolor);//
     // @include set_x_content_bgcolor($table_content_x_bgcolor);//
     // @include set_y_content_bgcolor($table_content_y_bgcolor);//
