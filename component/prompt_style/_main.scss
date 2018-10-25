@@ -1,0 +1,58 @@
+@mixin set_prompt($btn_color, $padding, $prompt_main_color, $border_radius) {
+    position: relative;
+    ;
+    border: 1px solid $prompt_main_color;
+    border-radius: $border_radius;
+    background: $prompt_main_color;
+    padding: 0.5 * $padding $padding $padding $padding;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 10em;
+    h2 {
+        text-align: center;
+        color: #fff;
+        overflow: hidden;
+        padding: 0;
+        font-size: 16px;
+    }
+    p {
+        display: block;
+        height: 8em;
+        color: $prompt_main_color;
+        background-color: #fff;
+        padding: 10px 8px;
+        margin-bottom: $padding;
+        border-radius: $border_radius;
+        overflow: hidden;
+    }
+    button {
+        display: block;
+        height: 2em;
+        width: 4em;
+        background: $prompt_main_color;
+        color: $btn_color;
+        border-radius: 2px;
+        border: 1px solid $btn_color;
+        overflow: hidden;
+        outline: none;
+    }
+    & button:nth-of-type(1) {
+        position: absolute;
+        left: 2 * $padding;
+        bottom: $padding;
+    }
+    & button:nth-of-type(2) {
+        position: absolute;
+        right: 2* $padding;
+        bottom: $padding;
+    }
+    button.active {
+        background: $btn_color;
+        overflow: hidden;
+        color: $prompt_main_color;
+    }
+    @media screen and (max-width: 768px) {
+ 
+        margin-top: 12em;
+    }
+}
