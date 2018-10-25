@@ -5,6 +5,22 @@
     width: 0;
     height: 0;
     overflow: hidden; }
+  .alert_back .move-in {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1); }
+  .alert_back .move-out {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1);
+    position: relative;
+    box-sizing: border-box;
+    width: 400px;
+    height: 300px;
+    background-color: #464d77;
+    margin: auto;
+    padding: 0.5em 1em 1em 1em;
+    border-radius: 10px; }
   .alert_back.open {
     position: fixed;
     display: flex;
@@ -16,6 +32,9 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.3); }
   .alert_back .alert_box.open {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1);
     position: relative;
     box-sizing: border-box;
     width: 400px;
