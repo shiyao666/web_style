@@ -40,7 +40,8 @@ input {
     float: left; }
 .crius-card-list .card-body {
   display: block;
-  padding: 1em; }
+  padding: 1em;
+  overflow: hidden; }
 .crius-card-list .card-foot {
   display: block;
   height: 2em;
@@ -79,7 +80,7 @@ input {
   left: 0; }
 .crius-card-list .card-body {
   position: relative;
-  height: 10em;
+  height: 8em;
   transition: height 0.3s cubic-bezier(0.4, 0, 1, 1); }
 .crius-card-list .card-page {
   border: none;
@@ -127,7 +128,7 @@ input {
   border-right: 16px solid transparent;
   border-top: 10px solid #fff;
   left: 50%;
-  margin-left: -10px;
+  margin-left: -23px;
   margin-top: -4px; }
 .crius-card-list .card-foot .active::after {
   position: absolute;
