@@ -1,11 +1,7 @@
 @mixin set_prompt($screen_color, $content_color, $btn_color, $padding, $prompt_main_color, $border_radius) {
     width: 0;
     height: 0;
-    .alert_box {
-        width: 0;
-        height: 0;
-        overflow: hidden;
-    }
+    display: none;
     &.open {
         position: fixed;
         display: flex;
@@ -71,6 +67,8 @@
             overflow: hidden;
             color: $prompt_main_color;
         }
+
+        
         button:hover {
             background: $btn_color;
             overflow: hidden;

@@ -1,10 +1,7 @@
 .alert_back {
   width: 0;
-  height: 0; }
-  .alert_back .alert_box {
-    width: 0;
-    height: 0;
-    overflow: hidden; }
+  height: 0;
+  display: none; }
   .alert_back.open {
     position: fixed;
     display: flex;
