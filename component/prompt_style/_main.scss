@@ -6,24 +6,6 @@
         height: 0;
         overflow: hidden;
     }
-    .move-in {
-        display: block;
-        opacity: 0;
-        transition: opacity .3s cubic-bezier(0.4, 0, 1, 1);
-    }
-    .move-out {
-        display: block;
-        opacity: 0;
-        transition: opacity .3s cubic-bezier(0.4, 0, 1, 1);
-        position: relative;
-        box-sizing: border-box;
-        width: 400px;
-        height: 300px;
-        background-color: $prompt_main_color;
-        margin: auto;
-        padding: 0.5 * $padding $padding $padding $padding;
-        border-radius: $border_radius;
-    }
     &.open {
         position: fixed;
         display: flex;
@@ -35,10 +17,7 @@
         left: 0;
         background-color: rgba($color: $screen_color, $alpha: 0.3);
     }
-    .alert_box.open {
-        display: block;
-        opacity: 1;
-        transition: opacity .3s cubic-bezier(0.4, 0, 1, 1);
+    .alert_box {
         position: relative;
         box-sizing: border-box;
         width: 400px;
@@ -100,5 +79,20 @@
         @media screen and (max-width:768px) {
             margin: auto 1em;
         }
+    }
+    .alert_box.open {
+        display: block;
+        opacity: 1;
+        transition: opacity .3s cubic-bezier(0.4, 0, 1, 1);
+    }
+    .move-in {
+        display: block;
+        opacity: 0;
+        transition: opacity .3s cubic-bezier(0.4, 0, 1, 1);
+    }
+    .move-out {
+        display: block;
+        opacity: 0;
+        transition: opacity .3s cubic-bezier(0.4, 0, 1, 1);
     }
 }
