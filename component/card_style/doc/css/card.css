@@ -83,7 +83,7 @@ input {
   left: 0; }
 .crius-card-list .card-body {
   position: relative;
-  height: 8em;
+  height: 9em;
   transition: height 0.3s cubic-bezier(0.4, 0, 1, 1); }
 .crius-card-list .card-page {
   border: none;
