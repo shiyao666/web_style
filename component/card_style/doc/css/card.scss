@@ -7,7 +7,7 @@ input {
 
 .crius-card-list {
     @include set_card( 10px, #2c4086, 10px);
-    @include set_active((1, 1, 1), 22em, 8em);
+    @include set_active((1, 1, 1), 22em, 8em,2em);
 }
 
 .input_list {
