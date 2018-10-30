@@ -12,33 +12,35 @@ table {
   * table {
     border-collapse: collapse; }
 
-.art1 tr {
-  line-height: 1.5em;
-  text-align: left;
-  padding: 1em 0;
-  margin: 0; }
-.art1 td {
-  line-height: 1.5em;
-  text-align: left;
-  padding: 1em 0.5em;
-  margin: 0; }
-.art1 th {
-  line-height: 1.5em;
-  text-align: left;
-  padding: 1em 0.5em;
-  margin: 0; }
-.art1 thead:after {
-  content: " ";
-  display: table-row;
-  height: 1em;
-  background-color: transparent; }
-.art1 thead tr {
-  border-bottom: 1px solid #666; }
-.art1 tfoot tr {
-  border-top: 1px solid #666; }
-.art1 tbody th:first-child {
-  border-right: 1px solid #666; }
-.art1 tbody th:last-child {
-  border-left: 1px solid #666; }
+.art1 {
+  width: 100%; }
+  .art1 tr {
+    line-height: 1.5em;
+    text-align: left;
+    padding: 1em 0;
+    margin: 0; }
+  .art1 td {
+    line-height: 1.5em;
+    text-align: left;
+    padding: 1em 0.5em;
+    margin: 0; }
+  .art1 th {
+    line-height: 1.5em;
+    text-align: left;
+    padding: 1em 0.5em;
+    margin: 0; }
+  .art1 thead:after {
+    content: " ";
+    display: table-row;
+    height: 1em;
+    background-color: transparent; }
+  .art1 thead tr {
+    border-bottom: 1px solid #666; }
+  .art1 tfoot tr {
+    border-top: 1px solid #666; }
+  .art1 tbody th:first-child {
+    border-right: 1px solid #666; }
+  .art1 tbody th:last-child {
+    border-left: 1px solid #666; }
 
 /*# sourceMappingURL=table_new.css.map */

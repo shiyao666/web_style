@@ -11,7 +11,7 @@
     .active {
         display: block;
         border-radius: $border_radius;
-        border: 2px solid #ccc;
+        border: 0px solid #ccc;
         border-left-width: $bor_left_width;
         border-left-color: $border_left_color;
         .card-foot {
@@ -44,7 +44,6 @@
     }
     .card-body {
         display: block;
-        padding: 1em;
         overflow: hidden;
     }
     .card-foot {
@@ -119,6 +118,8 @@
     }
     .card-body .card-page {
         position: absolute;
+        padding: 1em;
+        box-sizing: border-box;
     }
     .card-foot .card-item {
         float: left;

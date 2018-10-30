@@ -7,12 +7,14 @@
 input {
   float: left; }
 
+.crius-card-list .card-project {
+  box-shadow: inset 0px 0px 4px 4px rgba(0, 0, 0, 0.2); }
 .crius-card-list .inverse {
   color: #fff; }
 .crius-card-list .active {
   display: block;
   border-radius: 10px;
-  border: 2px solid #ccc;
+  border: 0px solid #ccc;
   border-left-width: 10px;
   border-left-color: #2c4086; }
   .crius-card-list .active .card-foot {
@@ -40,7 +42,6 @@ input {
     float: left; }
 .crius-card-list .card-body {
   display: block;
-  padding: 1em;
   overflow: hidden; }
 .crius-card-list .card-foot {
   display: block;
@@ -98,7 +99,9 @@ input {
   height: auto;
   transition: opacity .3s ease; }
 .crius-card-list .card-body .card-page {
-  position: absolute; }
+  position: absolute;
+  padding: 1em;
+  box-sizing: border-box; }
 .crius-card-list .card-foot .card-item {
   float: left; }
 .crius-card-list .card-foot .active {

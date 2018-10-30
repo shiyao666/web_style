@@ -6,8 +6,11 @@ input {
 }
 
 .crius-card-list {
+    .card-project {
+        box-shadow: inset 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
+    }
     @include set_card( 10px, #2c4086, 10px);
-    @include set_active((1, 1, 1), 22em, 9em,2em);
+    @include set_active((1, 1, 1), 22em, 9em, 2em);
 }
 
 .input_list {
