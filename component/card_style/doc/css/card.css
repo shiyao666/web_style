@@ -8,7 +8,7 @@ input {
   float: left; }
 
 .crius-card-list .card-project {
-  box-shadow: inset 0px 0px 4px 4px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); }
 .crius-card-list .inverse {
   color: #fff; }
 .crius-card-list .active {
@@ -83,13 +83,13 @@ input {
   width: 33.3333333333%;
   left: 0; }
 .crius-card-list .card-body {
-  position: relative;
   height: 9em;
+  position: relative;
   transition: height 0.3s cubic-bezier(0.4, 0, 1, 1); }
 .crius-card-list .card-page {
   border: none;
   opacity: 0; }
-.crius-card-list .move-in {
+.crius-card-list .card-page.move-in {
   display: block;
   opacity: 0;
   transition: opacity .3s ease; }
@@ -112,8 +112,7 @@ input {
 .crius-card-list .open .card-foot {
   height: 0; }
 .crius-card-list .open .card-body {
-  height: 22em;
-  transition: height 0.3s cubic-bezier(0.4, 0, 1, 1); }
+  height: initial; }
 .crius-card-list .open .card-body .card-page {
   transition: opacity .3s ease;
   opacity: 1;
@@ -123,7 +122,10 @@ input {
   background-repeat: no-repeat;
   bottom: 2px; }
 .crius-card-list .open.move-out .card-body {
-  height: 22em;
+  height: 18em;
+  transition: height 0.3s cubic-bezier(0.4, 0, 1, 1); }
+.crius-card-list .active.move-in .card-body {
+  height: 18em;
   transition: height 0.3s cubic-bezier(0.4, 0, 1, 1); }
 .crius-card-list .card-foot .active::before {
   position: absolute;

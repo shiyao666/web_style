@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>element</title>
+    <style>
+        .muscle {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background-color: #7ec2f3;
+            z-index: 10;
+        }
+
+        .fat {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background-color: #ffbb4f;
+            top: 9px;
+            left: 239px;
+            z-index: 9;
+        }
+
+        .other {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background-color: #ff6260;
+            top: 9px;
+            left: 469px;
+            z-index: 8;
+        }
+
+        .pre {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 100px;
+            background-color: #fff;
+            top: 32px;
+            left: 32px;
+            z-index: 11;
+        }
+
+        .sx1 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transform: rotate(0deg);
+            clip: rect(0px, 100px, 200px, 0px);
+            border-radius: 100px;
+            background-color: #f00;
+        }
+
+        .sx2 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transform: rotate(0deg);
+            clip: rect(0px, 100px, 200px, 0px);
+            border-radius: 100px;
+            background: linear-gradient(45deg, #333, red);
+        }
+
+        .muscle-sx3 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transform: rotate(30deg);
+            clip: rect(0px, 200px, 200px, 100px);
+            border-radius: 100px;
+            background-color: #7ec2f3;
+        }
+
+        .fat-sx3 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transform: rotate(30deg);
+            clip: rect(0px, 200px, 200px, 100px);
+            border-radius: 100px;
+            background-color: #ffbb4f;
+        }
+
+        .other-sx3 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transform: rotate(30deg);
+            clip: rect(0px, 200px, 200px, 100px);
+            border-radius: 100px;
+            background-color: #ff6260;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="muscle">
+        <div class="sx1"></div>
+        <div class="sx2"></div>
+    </div>
+
+
+
+
+    <div class="pre"></div>
+    <script src='js/jquery.min.js'></script>
+    <script>
+        $(function () {
+            var muscle = 30, fat = 10, other = 10;
+            if (muscle > 50) {
+                $(".muscle .sx2").addClass("muscle-sx3");
+                $(".muscle .muscle-sx3").css("transform", "rotate(" + (muscle / 5 * 18 - 180) + "deg)").css("color", "#fff");
+            } else {
+                $(".muscle .sx2").css("transform", "rotate(" + (muscle / 5 * 18 - 180) + "deg)").css("color", "#fff");
+            }
+            if ((fat + muscle) > 50) {
+                $(".fat .sx2").addClass("fat-sx3");
+                $(".fat .fat-sx3").css("transform", "rotate(" + ((fat + muscle) / 5 * 18 - 180) + "deg)").css("color", "#fff");
+            } else {
+                $(".fat .sx2").css("transform", "rotate(" + ((fat + muscle) / 5 * 18 - 180) + "deg)").css("color", "#fff");
+            }
+            if ((other + fat + muscle) > 50) {
+                $(".other .sx2").addClass("other-sx3");
+                $(".other .other-sx3").css("transform", "rotate(" + ((other + fat + muscle) / 5 * 18 - 180) + "deg)").css("color", "#fff");
+            } else {
+                $(".other .sx2").css("transform", "rotate(" + ((other + fat + muscle) / 5 * 18 - 180) + "deg)").css("color", "#fff");
+            }
+        })
+    </script>
+</body>
+
+</html>
